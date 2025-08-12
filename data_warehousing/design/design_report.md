@@ -1,12 +1,10 @@
 # Data Warehouse Star Schema Design Report
 
-## 1. Introduction
-
 In this report, I describe how I designed a **Sales Data Warehouse** using the **Star Schema** approach. It includes a schema diagram, a basic architecture diagram, SQL table definitions, some sample data, and example queries to test if the design works as expected.
 
 ---
 
-## 2. Star Schema Overview
+## 1. Star Schema Overview
 
 The **Star Schema** is a type of database design that has a **central fact table** that stores the important business events (like sales), and several **dimension tables** that describe those events in more detail (like information about the product, customer, time, and store). 
 
@@ -22,7 +20,7 @@ For this project, here’s what I included:
 
 ---
 
-## 3. Why use the Star Schema over the Snowflake Schema?
+## 2. Why use the Star Schema over the Snowflake Schema?
 
 The **Star Schema** keeps dimension tables denormalized (fewer joins, simpler queries) while the **Snowflake Schema** normalizes dimensions into multiple related tables.
 
@@ -38,7 +36,7 @@ For this warehouse, the **Star Schema** was chosen to optimize for **query perfo
 
 ---
 
-## 4. Architecture Diagram
+## 3. Architecture Diagram
 
 ![Architecture Diagram](architecture_diagram.png)  
 **Flow:** Data Source → ETL → Data Warehouse (Star Schema) 
@@ -47,16 +45,16 @@ I tried to show the basic flow in my diagram: data comes in from the source, goe
 
 ---
 
-## 5. Schema Diagram
+## 4. Schema Diagram
 
 ![Star Schema Diagram](schema_diagram.png)  
 This diagram shows how the fact table connects to each dimension table using primary keys (PK) and foreign keys (FK). This helps understand the relationships much better.
 
 ---
 
-## 6. Data Dictionary
+## 5. Data Dictionary
 
-### 6.1 Fact Table: `Sales_Fact`
+### 5.1 Fact Table: `Sales_Fact`
 | Column        | Type        | Description                               |
 |---------------|-------------|-------------------------------------------|
 | SalesID       | INT (PK)    | Unique identifier for each sales record   |
@@ -67,7 +65,7 @@ This diagram shows how the fact table connects to each dimension table using pri
 | QuantitySold  | INT         | Number of units sold                      |
 | TotalSales    | DECIMAL     | Total sales value                         |
 
-### 6.2 Dimension Tables
+### 5.2 Dimension Tables
 
 #### `Dim_Product`
 | Column        | Type        | Description                  |
@@ -107,7 +105,7 @@ This diagram shows how the fact table connects to each dimension table using pri
 
 ---
 
-## 7. Sample Data
+## 6. Sample Data
 
 A small SQL script called [`sample_data.sql`](sample_data.sql) to add some initial data for testing. Here are a few examples:
 
