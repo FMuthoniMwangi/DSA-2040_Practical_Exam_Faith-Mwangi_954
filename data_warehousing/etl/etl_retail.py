@@ -41,6 +41,19 @@ def extract_data():
         logging.error(f"Error during extraction: {e}")
         raise
 
+# Assign product categories (for OLAP slice)
+def assign_category(description):
+    description = str(description).lower()
+    if any(word in description for word in ['laptop', 'mouse', 'keyboard']):
+        return 'Electronics'
+    elif any(word in description for word in ['t-shirt', 'dress', 'shirt']):
+        return 'Apparel'
+    elif any(word in description for word in ['book']):
+        return 'Books'
+    else:
+        return 'Other'
+
+
 def transform_data(df):
     """Transform step: remove invalid rows, calculate TotalSales, prepare dimensions"""
     try:
@@ -53,6 +66,10 @@ def transform_data(df):
             return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
 
         df['TotalSales'] = df['Quantity'] * df['UnitPrice']
+
+        # Add category column
+        df['Category'] = df['Description'].apply(assign_category)
+
 
         # Prepare Customer Dimension
         customer_dim = (

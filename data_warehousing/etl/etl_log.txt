@@ -6,3 +6,11 @@
 2025-08-13 16:10:42,062 - INFO - Profile report saved to data_warehousing/etl/OnlineRetail_cleaned_summary.html
 2025-08-13 16:10:45,227 - INFO - Data loaded into DB: Fact 398793, CustomerDim 4346, TimeDim 17282
 2025-08-13 16:10:45,227 - INFO - ETL process completed successfully.
+2025-08-13 17:28:37,367 - INFO - ETL process started.
+2025-08-13 17:31:14,105 - INFO - Data extracted: 541909 rows, 8 columns.
+2025-08-13 17:31:14,756 - INFO - After dropping missing critical values: 406829 rows.
+2025-08-13 17:31:14,892 - INFO - After removing invalid rows: 397884 rows.
+2025-08-13 17:31:25,850 - INFO - Cleaned CSV saved to data_warehousing/data/processed\OnlineRetail_cleaned.csv
+2025-08-13 17:32:14,593 - INFO - Profile report saved to data_warehousing/etl/OnlineRetail_cleaned_summary.html
+2025-08-13 17:32:24,471 - INFO - Data loaded into DB: Fact 398793, CustomerDim 4346, TimeDim 17282
+2025-08-13 17:32:24,472 - INFO - ETL process completed successfully.
