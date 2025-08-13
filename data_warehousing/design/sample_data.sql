@@ -1,5 +1,5 @@
 /*
-    The purpose of the sample_data.sql is to populate the dimension and fact tables with test data
+    sample_data.sql is to populate the dimension and fact tables with test data
     for validating the star schema structure and relationships.
 */
 
