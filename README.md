@@ -10,7 +10,7 @@ It covers designing a sales data warehouse, performing OLAP analyses, preprocess
 ---
 
 ## File Structure
-
+```
 data_warehousing/
 ├── data/
 │ ├── raw/
@@ -59,7 +59,7 @@ LICENSE
 README.md
 DSA_2040_ultimate_report.md
 ultimate_report.py
-
+```
 
 ---
 
