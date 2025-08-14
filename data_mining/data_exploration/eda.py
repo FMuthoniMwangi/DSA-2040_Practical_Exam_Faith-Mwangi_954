@@ -10,7 +10,7 @@ logging.basicConfig(
 )
 
 # Output path
-OUTPUT_DIR = os.path.join("data_mining", "task1_output")
+OUTPUT_DIR = os.path.join("data_exploration", "task1_output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def run(df_raw, df_scaled):

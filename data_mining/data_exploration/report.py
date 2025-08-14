@@ -2,7 +2,7 @@
 import os
 
 # Output path
-OUTPUT_DIR = os.path.join("data_mining", "task1_output")
+OUTPUT_DIR = os.path.join("data_exploration", "task1_output")
 
 def generate_md_report():
     """Generate a Markdown report of preprocessing & EDA outputs with explanations."""

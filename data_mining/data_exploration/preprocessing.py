@@ -10,8 +10,8 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# Updated output path
-OUTPUT_DIR = os.path.join("data_mining", "task1_output")
+# Output path
+OUTPUT_DIR = os.path.join("data_exploration", "task1_output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def run(csv_path=None):
